@@ -156,6 +156,8 @@ function main_loop(ctx, universe) {
     step_universe(dt, universe);
     draw_universe(ctx, universe);
     universe.last_tick = now;
+    var ft_tl = v2d_length(v2d_sub(universe.bodies[0].position, universe.bodies[1].position));
+    debug('From Terra to Luna', ft_tl.toFixed(2));
 }
 
 window.onload = function() {
